@@ -7,7 +7,7 @@ import InputsContainer from "../molecules/InputsContainer/InputsContainer";
 import Modal from "../molecules/Modal/Modal";
 
 const instanceForm = { name: "", email: "", password: "", textarea: "" };
-const instanceError = { name: false, email: false, password: false }; // TODO ver error en consola
+const instanceError = { name: false, email: false, password: false };
 
 function Form() {
   const [data, setData] = useState(instanceForm);
@@ -31,15 +31,22 @@ function Form() {
     return "error";
   }
 
-  // TODO agregar regex name y pass
   function validations() {
+    const regexName = /^[a-zA-Z\s]*$/;
     const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    if (!data.name.length) return handleError("name", "Required");
+    // const regexPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
 
+    if (!data.name.length) return handleError("name", "Required");
+    if (!data.name.match(regexName)) return handleError("name", "Invalid name");
     if (!data.email.length) return handleError("email", "Required");
     if (!data.email.match(regexEmail))
       return handleError("email", "Wrong format");
     if (!data.password.length) return handleError("password", "Required");
+    // if (!data.password.match(regexPass))
+    //   return handleError(
+    //     "password",
+    //     "Must contain 8 characters and at least 1 lowercase letter, 1 uppercase letter, 1 number and 1 symbol"
+    //   );
   }
 
   return (
