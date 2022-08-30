@@ -6,7 +6,6 @@ import {
   Dialog,
   DialogActions,
   DialogContent,
-  DialogContentText,
   DialogTitle,
 } from "@mui/material";
 import React, { useRef, useState } from "react";
@@ -33,13 +32,12 @@ function Modal({ data, open, setOpen }) {
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">Form data in JSON</DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            <pre ref={ref}>{JSON.stringify(data, null, 2)}</pre>
-          </DialogContentText>
+          <pre className="json_text" ref={ref}>
+            {JSON.stringify(data, null, 2)}
+          </pre>
 
           {alert && (
             <Alert

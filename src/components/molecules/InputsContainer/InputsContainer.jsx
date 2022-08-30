@@ -13,7 +13,7 @@ function InputsContainer({ handleChange, data, error }) {
         name="name"
         onChange={handleChange}
         value={data.name}
-        error={error.name}
+        error={error.name && true}
         helperText={error.name && error.name}
       />
 
@@ -27,7 +27,7 @@ function InputsContainer({ handleChange, data, error }) {
         name="email"
         onChange={handleChange}
         value={data.email}
-        error={error.email}
+        error={error.email && true}
         helperText={error.email && error.email}
       />
 
@@ -40,7 +40,7 @@ function InputsContainer({ handleChange, data, error }) {
         name="password"
         onChange={handleChange}
         value={data.password}
-        error={error.password}
+        error={error.password && true}
         helperText={error.password && error.password}
       />
 
