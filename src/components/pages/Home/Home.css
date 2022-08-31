@@ -1,0 +1,28 @@
+.home_container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home_container h1 {
+  text-align: center;
+}
+
+.link_home {
+  color: black;
+}
+
+.link_home:hover {
+  color: grey;
+}
+
+.exBtns_container {
+  display: flex;
+  justify-content: center;
+}
+
+.home_container p {
+  text-align: center;
+}

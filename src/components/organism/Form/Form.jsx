@@ -50,7 +50,7 @@ function Form() {
   }
 
   return (
-    <form className="form_container" onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <InputsContainer data={data} error={error} handleChange={handleChange} />
 
       <Modal data={data} open={modal} setOpen={setModal} />
