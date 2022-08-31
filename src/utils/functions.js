@@ -53,6 +53,5 @@ export function completeCarton() {
     numbers.push(i);
   }
 
-  console.log(carton);
   return carton;
 }
