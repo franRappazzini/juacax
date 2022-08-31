@@ -16,7 +16,7 @@ export function completeCarton() {
 
   // lleno el carton de numeros
   for (let i = 0; i < carton.length; i++) {
-    const min = i * 9 + i || 1; // para que la primer vuelta sea 1 y no 0
+    const min = i * 9 + i || 1;
     const max = min + 9;
 
     while (carton[i].length < 3) {
