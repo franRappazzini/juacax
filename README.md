@@ -1,3 +1,31 @@
+# Challenge de juacaxDev
+
+Consigna 1:
+• Generar un programa que cree un cartón de bingo aleatorio y lo muestre por pantalla (puede ser una web, una app de consola, o la plataforma que gusten)
+• Cartón de 3 filas por 9 columnas
+• El cartón debe tener 15 números y 12 espacios en blanco
+• Cada fila debe tener 5 números
+• Cada columna debe tener 1 o 2 números
+• Ningún número puede repetirse
+• La primer columna contiene los números del 1 al 9, la segunda del 10 al 19, la tercera del 20 al 29, así sucesivamente hasta la última columna la cual contiene     del 80 al 90
+
+Consigna 2:
+Generar una app web en React donde muestre un formulario (con inputs de nombre, email, contraseña, textarea):
+• Los 3 primeros campos deben ser obligatorios
+• Al hacer click en Submit debe generar un objeto con la estructura {name:input.value, email: input.value, password: input.value, textarea: input.value}, el cual     deberá mostrarse en un modal en formato de JSON.
+• Sólo deberá aparecer el modal en caso de tener completo los campos requeridos (sugerimos usar Formik para validación)
+• El estilo es libre pero debe respetar la sobriedad del ejemplo.
+• Se evaluará aparte de la funcionalidad, la atomicidad del código (códigos breves y bien divididos)
+
+[Deploy en vercel](https://juacax.vercel.app/)
+
+## Dependencias Utilizadas 🛠️
+
+* React JS
+* React Router DOM
+* Material UI
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
