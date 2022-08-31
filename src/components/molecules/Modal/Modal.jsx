@@ -45,7 +45,7 @@ function Modal({ data, open, setOpen }) {
               severity="success"
               className="alert_container"
             >
-              Copy!
+              Copied!
             </Alert>
           )}
         </DialogContent>

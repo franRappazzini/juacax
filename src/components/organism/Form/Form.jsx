@@ -3,8 +3,8 @@ import "./Form.css";
 import React, { useState } from "react";
 
 import { Button } from "@mui/material";
-import InputsContainer from "../molecules/InputsContainer/InputsContainer";
-import Modal from "../molecules/Modal/Modal";
+import InputsContainer from "../../molecules/InputsContainer/InputsContainer";
+import Modal from "../../molecules/Modal/Modal";
 
 const instanceForm = { name: "", email: "", password: "", textarea: "" };
 const instanceError = { name: false, email: false, password: false };

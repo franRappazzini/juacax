@@ -27,25 +27,30 @@ export function completeCarton() {
     carton[i].sort((a, b) => a - b);
   }
 
-  // TODO ver borrado de numeros (4 por fila tienen que borrarse)
-
-  // saco 9 numeros aleatoriamente
-  for (let i = 0; i < carton.length; i++) {
-    const num = randomNum(3);
-    console.log(num);
-    carton[i][num] = " ";
-  }
-
-  // saco 3 numeros aleatoriamente mas
+  // saco de manera aleatoria 9 numeros
   let i = 0;
-  while (i < 3) {
-    const index = randomNum(8);
-    const num = randomNum(3);
+  const posDeletes = [[], [], []];
+  while (i < carton.length) {
+    const iDelete = randomNum(3);
 
-    if (carton[index][num] !== " ") {
-      carton[index][num] = " ";
+    if (posDeletes[iDelete].length !== 3) {
+      carton[i][iDelete] = "";
+      posDeletes[iDelete].push(iDelete);
       i++;
     }
+  }
+
+  // saco de manera aleatoria 3 numeros mas
+  let j = 0;
+  const numbers = [];
+  while (j < 3) {
+    const i = randomNum(9);
+
+    if (!numbers.includes(i) && carton[i][j] !== "") {
+      carton[i][j] = "";
+      j++;
+    }
+    numbers.push(i);
   }
 
   console.log(carton);
